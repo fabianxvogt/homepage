@@ -76,6 +76,8 @@ function validSnapshot(value: unknown): value is Snapshot {
   return (
     !!value &&
     typeof value === 'object' &&
+    typeof (value as Snapshot).updatedAt === 'string' &&
+    Number.isFinite(Date.parse((value as Snapshot).updatedAt)) &&
     Array.isArray((value as Snapshot).projects) &&
     (value as Snapshot).projects.every(
       (p) =>
@@ -84,6 +86,10 @@ function validSnapshot(value: unknown): value is Snapshot {
         typeof p.title === 'string' &&
         typeof p.topic === 'string' &&
         typeof p.description === 'string' &&
+        typeof p.updatedAt === 'string' &&
+        Number.isFinite(Date.parse(p.updatedAt)) &&
+        Number.isFinite(p.stars) &&
+        Number.isFinite(p.forks) &&
         ['product', 'research'].includes(p.type) &&
         safeURL(p.repo) &&
         (!p.demo || safeURL(p.demo)) &&
@@ -159,7 +165,18 @@ export default function Home() {
   }, []);
   useEffect(() => {
     const el = viewport.current;
-    if (el) setZoom(Math.max(0.65, Math.min(1, (el.clientWidth - 50) / 1450)));
+    if (!el) return;
+    const width = Math.max(
+      1000,
+      new Set(initial.projects.map((p) => p.topic.split('/')[0])).size * 240 +
+        40,
+    );
+    const scale = Math.max(0.65, Math.min(1, (el.clientWidth - 50) / width));
+    setZoom(scale);
+    const frame = requestAnimationFrame(() => {
+      el.scrollLeft = Math.max(0, (width * scale - el.clientWidth) / 2);
+    });
+    return () => cancelAnimationFrame(frame);
   }, []);
   const all = data.projects;
   const projects = all.filter((p) => filter === 'all' || p.type === filter);
