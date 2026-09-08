@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T14:53:15.561Z",
+  "updatedAt": "2026-09-08T14:55:29.744Z",
   "projects": [
     {
       "id": "acid-forge",
@@ -251,6 +251,20 @@
       "commits": 4
     },
     {
+      "id": "homepage",
+      "title": "My Homepage",
+      "description": "My interactive atlas of products, research, music and creative computation. Each project brings its own story from its README.",
+      "topic": "Play & products/Useful software",
+      "type": "product",
+      "demo": "https://fabian-portfolio.fabian523417.chatgpt.site/",
+      "repo": "https://github.com/fabianxvogt/homepage",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "updatedAt": "2026-09-08T14:55:05Z",
+      "commits": 1
+    },
+    {
       "id": "orbit-thief",
       "title": "Orbit Thief",
       "description": "One-button gravitational slingshot score attack game",
@@ -430,5 +444,5 @@
       "commits": 2
     }
   ],
-  "commitsUpdatedAt": "2026-09-08T14:53:18.156Z"
+  "commitsUpdatedAt": "2026-09-08T14:55:32.794Z"
 }
