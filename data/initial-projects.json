@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T07:43:19.966Z",
+  "updatedAt": "2026-10-08T08:42:14.273Z",
   "projects": [
     {
       "id": "acid-forge",
@@ -261,8 +261,8 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-10-08T06:50:54Z",
-      "commits": 689
+      "updatedAt": "2026-10-08T07:43:24Z",
+      "commits": 690
     },
     {
       "id": "orbit-thief",
@@ -291,6 +291,21 @@
       "language": "JavaScript",
       "updatedAt": "2026-09-08T14:42:45Z",
       "commits": 8
+    },
+    {
+      "id": "phosphor",
+      "title": "Phosphor",
+      "description": "A browser VJ instrument for DJ sets: generative GPU families on a keyboard clip grid with a beat-following autopilot. The linked demo is a frozen earlier build.",
+      "topic": "Creative tools/Generative art",
+      "type": "product",
+      "demo": "https://phosphor-performance.vercel.app/",
+      "featured": true,
+      "repo": "https://github.com/fabianxvogt/phosphor",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "updatedAt": "2026-10-08T08:27:35Z",
+      "commits": 59
     },
     {
       "id": "plotter-garden",
@@ -429,5 +444,5 @@
       "commits": 2
     }
   ],
-  "commitsUpdatedAt": "2026-10-08T07:43:22.715Z"
+  "commitsUpdatedAt": "2026-10-08T08:42:17.364Z"
 }
